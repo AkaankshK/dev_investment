@@ -2,6 +2,7 @@ import 'package:devinvestment/CustomerFlow/Screens/forgot_password.dart';
 import 'package:flutter/material.dart';
 import 'package:devinvestment/CustomerFlow/utils/const.dart';
 import 'package:devinvestment/CustomerFlow/utils/buttons.dart';
+import 'package:devinvestment/Ownerpage/homepage.dart';
 class welcome extends StatefulWidget {
   @override
   _welcomeState createState() => _welcomeState();
@@ -61,7 +62,13 @@ class _welcomeState extends State<welcome> {
                   SizedBox(
                     height: 20,
                   ),
-                  RoundButoon(color: Colors.deepPurple,f:(){},name: 'Login',),
+                  RoundButoon(color: Colors.deepPurple,f:(){
+                  if(_email=='customer'){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
+                    }
+                  }},name: 'Login',),
                   SizedBox(
                     height: 20,
                   ),
