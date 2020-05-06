@@ -2,7 +2,7 @@ import 'package:devinvestment/CustomerFlow/Screens/forgot_password.dart';
 import 'package:flutter/material.dart';
 import 'package:devinvestment/CustomerFlow/utils/const.dart';
 import 'package:devinvestment/CustomerFlow/utils/buttons.dart';
-import 'package:devinvestment/Ownerpage/homepage.dart';
+import 'package:devinvestment/OwnerLogin/HomePage.dart';
 class welcome extends StatefulWidget {
   @override
   _welcomeState createState() => _welcomeState();
