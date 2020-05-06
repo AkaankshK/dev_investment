@@ -68,7 +68,7 @@ class _welcomeState extends State<welcome> {
                           context,
                           MaterialPageRoute(builder: (context) => HomePage()));
                     }
-                  }},name: 'Login',),
+                  },name: 'Login',),
                   SizedBox(
                     height: 20,
                   ),
