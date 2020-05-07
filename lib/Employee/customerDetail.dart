@@ -228,7 +228,7 @@ class _CustomerDetailState extends State<CustomerDetail> {
               child: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("images/back24.png"),
+                    image: AssetImage("images/finance14.png"),
                     fit: BoxFit.fill,
                     //colorFilter: ColorFilter.mode(Color.fromRGBO(192, 234, 218,1).withOpacity(0.6), BlendMode.softLight),
                   ),
