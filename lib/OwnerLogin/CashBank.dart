@@ -1,5 +1,6 @@
 
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 Map<int, Color> colors =
 {
@@ -46,7 +47,7 @@ class _CashBankState extends State<CashBank> {
 //
 //                      fit: BoxFit.fill)
 //              )
-              child: Image.asset("assets/finance14.png"),
+              child: Image.asset("assets/finance14.png",fit: BoxFit.fill,),
             ),
             getContents(),
           ],

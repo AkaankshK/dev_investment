@@ -43,7 +43,7 @@ class _AddPartyState extends State<AddParty> {
             Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
-                  child: Image.asset("assets/background2.png"),),
+                  child: Image.asset("assets/background2.png",fit: BoxFit.fill,),),
            getContents(),
           ],
         ),

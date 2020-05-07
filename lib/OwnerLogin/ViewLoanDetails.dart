@@ -68,7 +68,7 @@ class _LoanDetailsState extends State<LoanDetails> {
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          child: Image.asset("assets/backmain1.png",fit: BoxFit.cover
+          child: Image.asset("assets/backmain1.png",fit: BoxFit.fill
             ,),),
         Padding(
           padding: EdgeInsets.only(top: 100,left: 35),

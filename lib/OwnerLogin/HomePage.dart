@@ -1,11 +1,17 @@
 
+
 import 'package:devinvestment/OwnerLogin/AddParty/AddParty.dart';
+import 'package:devinvestment/OwnerLogin/BusinessReport.dart';
 import 'package:devinvestment/OwnerLogin/CashBank.dart';
 import 'package:devinvestment/OwnerLogin/ExpensesPage.dart';
 import 'package:devinvestment/OwnerLogin/LoanRequest.dart';
 import 'package:devinvestment/OwnerLogin/ViewLoanDetails.dart';
-import 'package:devinvestment/dummy.dart';
+
 import 'package:flutter/material.dart';
+
+import 'Report/ReportPage.dart';
+
+
 Map<int, Color> colors =
 {
   50:Color.fromRGBO(136,14,79, .1),
@@ -26,6 +32,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool popup=false;
   MaterialColor dyellow = MaterialColor(0xffe0903b,colors);
   MaterialColor dblue = MaterialColor(0xff25274e,colors);
   @override
@@ -35,27 +42,36 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
 
         actions: [
-          FlatButton(
-            child: Icon(Icons.share,color: Colors.black,),
-            onPressed: (){},
+           GestureDetector(
+             child: Image.asset("assets/sh.png",color: Colors.black,height: 40,width: 40,),
+           ),
+          GestureDetector(
+            child: Image.asset("assets/11.png",color: Colors.black,height: 40,width: 40,),
           ),
-//          FlatButton(
-//            child: Container(
-//              height: 50,
-//              width: 50,
-//              child: Image.asset("assets/11.png"),
-//            ),
-//            onPressed: (){},
-//          ),
-          FlatButton(
-            child: Icon(Icons.notifications,color: Colors.black,),
-            onPressed: (){},
+          GestureDetector(
+            child: Image.asset("assets/t.png",color: Colors.black,height: 40 ,width: 40,),
           ),
-//
+          PopupMenuButton(
+              icon: Icon(Icons.more_vert,color: Colors.black,),
+              itemBuilder: (BuildContext context)=>[
+                PopupMenuItem(
+                  child: CheckboxListTile(
+                    title: Text("Show zero balance party"),
+                    value: popup,
+                    onChanged: (val){
+                      popup=true;
+                    },
+                  ),
+                )
+              ],
+          )
         ],
-        title: SizedBox(
-          height: 50,
-          width: 150,
+        title: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: 40,
+            minWidth: 150,
+            maxWidth: 150
+          ),
           child: TextField(
 
             decoration: InputDecoration(
@@ -85,6 +101,7 @@ class _HomePageState extends State<HomePage> {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
+            fit: BoxFit.fill,
           image: AssetImage("assets/NavBack.png")
           )
         ),
@@ -131,7 +148,7 @@ class _HomePageState extends State<HomePage> {
               leading: Image.asset("assets/Icons/4.png"),
               title: Text("Business Dashboard",style: TextStyle(fontSize: 15),),
               onTap: (){
-              //  Navigator.push(context, MaterialPageRoute(builder: (context)=> DummyPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> BusinessReport()));
               },
 
             ),
@@ -139,7 +156,7 @@ class _HomePageState extends State<HomePage> {
               leading: Image.asset("assets/Icons/5.png"),
               title: Text("Reports",style: TextStyle(fontSize: 15),),
               onTap: (){
-               // Navigator.push(context, MaterialPageRoute(builder: (context)=> DummyPage()));
+               Navigator.push(context, MaterialPageRoute(builder: (context)=> ReportPage()));
               },
 
             ),
@@ -195,128 +212,132 @@ class _HomePageState extends State<HomePage> {
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          child: Image.asset("assets/backmain1.png",fit: BoxFit.cover
+          child: Image.asset("assets/backmain1.png",fit: BoxFit.fill
             ,),),
-        Padding(
-          padding: EdgeInsets.only(top: 100,left: 35),
-          child: Table(
-            defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-            columnWidths: {1:FractionColumnWidth(.3)},
-            children: [
-              TableRow(
+        Wrap(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 150,horizontal: 30),
+              child: Table(
+                defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                columnWidths: {1:FractionColumnWidth(.4)},
                 children: [
+                  TableRow(
+                    children: [
 
-                  Text("Loan ID",style: TextStyle(fontSize: 20,color: dyellow),),
-                  Text("Amount",style: TextStyle(fontSize: 20,color: dyellow),),
+                      Text("Loan ID",style: TextStyle(fontSize: 20,color: dyellow),),
+                      Text("Amount",style: TextStyle(fontSize: 20,color: dyellow),),
 
-                ]
-              ),
-              TableRow(
-                  children: [
-
-                   SizedBox(height: 10,),
-                    SizedBox(height: 10,),
-
-                  ]
-              ),
-              TableRow(
-                  children: [
-
-                    GestureDetector(
-                        child: Text("ID Number",style: TextStyle(fontSize: 20,color: Colors.white),),
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> LoanDetails()));
-                    },),
-
-                    Row(
+                    ]
+                  ),
+                  TableRow(
                       children: [
-                        Text("Rupees ",style: TextStyle(fontSize: 20,color: Colors.white),),
-                        Image.asset("assets/11.png",height: 30,width: 30,)
-                      ],
-                    ),
 
-                  ]
-              ),
-              TableRow(
-                  children: [
+                       SizedBox(height: 10,),
+                        SizedBox(height: 10,),
 
-                    SizedBox(height: 10,),
-                    SizedBox(height: 10,),
-
-                  ]
-              ),
-              TableRow(
-                  children: [
-
-                    GestureDetector(
-                      child: Text("ID Number",style: TextStyle(fontSize: 20,color: Colors.white),),
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> LoanDetails()));
-                      },),
-
-                    Row(
+                      ]
+                  ),
+                  TableRow(
                       children: [
-                        Text("Rupees ",style: TextStyle(fontSize: 20,color: Colors.white),),
-                        Image.asset("assets/11.png",height: 30,width: 30,)
-                      ],
-                    ),
 
-                  ]
-              ),
-              TableRow(
-                  children: [
+                        GestureDetector(
+                            child: Text("ID Number",style: TextStyle(fontSize: 20,color: Colors.white),),
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> LoanDetails()));
+                        },),
 
-                    SizedBox(height: 10,),
-                    SizedBox(height: 10,),
+                        Row(
+                          children: [
+                            Text("Rupees ",style: TextStyle(fontSize: 20,color: Colors.white),),
+                            Image.asset("assets/11.png",height: 30,width: 30,)
+                          ],
+                        ),
 
-                  ]
-              ),
-              TableRow(
-                  children: [
-
-                    GestureDetector(
-                      child: Text("ID Number",style: TextStyle(fontSize: 20,color: Colors.white),),
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> LoanDetails()));
-                      },),
-
-                    Row(
+                      ]
+                  ),
+                  TableRow(
                       children: [
-                        Text("Rupees ",style: TextStyle(fontSize: 20,color: Colors.white),),
-                        Image.asset("assets/11.png",height: 30,width: 30,)
-                      ],
-                    ),
 
-                  ]
-              ),
-              TableRow(
-                  children: [
+                        SizedBox(height: 10,),
+                        SizedBox(height: 10,),
 
-                    SizedBox(height: 10,),
-                    SizedBox(height: 10,),
-
-                  ]
-              ),
-              TableRow(
-                  children: [
-
-                    GestureDetector(
-                      child: Text("ID Number",style: TextStyle(fontSize: 20,color: Colors.white),),
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> LoanDetails()));
-                      },),
-
-                    Row(
+                      ]
+                  ),
+                  TableRow(
                       children: [
-                        Text("Rupees ",style: TextStyle(fontSize: 20,color: Colors.white),),
-                        Image.asset("assets/11.png",height: 30,width: 30,)
-                      ],
-                    ),
 
-                  ]
+                        GestureDetector(
+                          child: Text("ID Number",style: TextStyle(fontSize: 20,color: Colors.white),),
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> LoanDetails()));
+                          },),
+
+                        Row(
+                          children: [
+                            Text("Rupees ",style: TextStyle(fontSize: 20,color: Colors.white),),
+                            Image.asset("assets/11.png",height: 30,width: 30,)
+                          ],
+                        ),
+
+                      ]
+                  ),
+                  TableRow(
+                      children: [
+
+                        SizedBox(height: 10,),
+                        SizedBox(height: 10,),
+
+                      ]
+                  ),
+                  TableRow(
+                      children: [
+
+                        GestureDetector(
+                          child: Text("ID Number",style: TextStyle(fontSize: 20,color: Colors.white),),
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> LoanDetails()));
+                          },),
+
+                        Row(
+                          children: [
+                            Text("Rupees ",style: TextStyle(fontSize: 20,color: Colors.white),),
+                            Image.asset("assets/11.png",height: 30,width: 30,)
+                          ],
+                        ),
+
+                      ]
+                  ),
+                  TableRow(
+                      children: [
+
+                        SizedBox(height: 10,),
+                        SizedBox(height: 10,),
+
+                      ]
+                  ),
+                  TableRow(
+                      children: [
+
+                        GestureDetector(
+                          child: Text("ID Number",style: TextStyle(fontSize: 20,color: Colors.white),),
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> LoanDetails()));
+                          },),
+
+                        Row(
+                          children: [
+                            Text("Rupees ",style: TextStyle(fontSize: 20,color: Colors.white),),
+                            Image.asset("assets/11.png",height: 30,width: 30,)
+                          ],
+                        ),
+
+                      ]
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     );

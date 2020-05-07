@@ -1,5 +1,6 @@
 import 'package:devinvestment/CustomerFlow/Screens/create_Account.dart';
 import 'package:devinvestment/CustomerFlow/Screens/welcome.dart';
+import 'package:devinvestment/OwnerLogin/HomePage.dart';
 import 'package:flutter/material.dart';
 class login extends StatefulWidget {
   @override
@@ -10,6 +11,17 @@ class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+
+        actions: [
+          FlatButton(
+            child: Text("Open Company Flow"),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+            },
+          )
+        ],
+      ),
       body: Stack(
           children:<Widget> [
       Container(

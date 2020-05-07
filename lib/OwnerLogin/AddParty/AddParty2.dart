@@ -46,7 +46,7 @@ class _AddParty2State extends State<AddParty2> {
 //
 //                      fit: BoxFit.fill)
 //              )
-            child: Image.asset("assets/finance14.png"),
+            child: Image.asset("assets/finance14.png",fit: BoxFit.fill,),
             ),
             getContents(),
           ],
@@ -57,7 +57,7 @@ class _AddParty2State extends State<AddParty2> {
 
   getContents() {
     return Padding(
-      padding: EdgeInsets.only(left: 30,top: 125,right: 20),
+      padding: EdgeInsets.only(left: 30,top: 100,right: 20),
       child: Column(
         children: [
           getTable(),
@@ -117,137 +117,141 @@ class _AddParty2State extends State<AddParty2> {
   }
 
   getTable() {
-    return Table(
-      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-      children: [
-        TableRow(
-            children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Loan Amount",style: TextStyle(color: Colors.white,fontSize: 20),)),
-              Padding(
-                padding:EdgeInsets.only(top: 10),
-                child: SizedBox(
-                  height: 50,
-                  width: 225,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
+    return Positioned(
+      top: 50,
+      left: 30,
+      child: Table(
+        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+        children: [
+          TableRow(
+              children: [
+                Padding(padding: EdgeInsets.only(top: 10),child: Text("Loan Amount",style: TextStyle(color: Colors.white,fontSize: 15),)),
+                Padding(
+                  padding:EdgeInsets.only(top: 10),
+                  child: SizedBox(
+                    height: 40,
+                    width: 225,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
 
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(width: 1,color: Colors.white)
-                        )
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(width: 1,color: Colors.white)
+                          )
 
 
+                      ),
                     ),
                   ),
-                ),
-              )
-            ]
-        ),
-        TableRow(
-            children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Interest in Rupees",style: TextStyle(color: Colors.white,fontSize: 20),)),
-              Padding(
-                padding:EdgeInsets.only(top: 10),
-                child: SizedBox(
-                  height: 50,
-                  width: 225,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
+                )
+              ]
+          ),
+          TableRow(
+              children: [
+                Padding(padding: EdgeInsets.only(top: 10),child: Text("Interest in Rupees",style: TextStyle(color: Colors.white,fontSize: 15),)),
+                Padding(
+                  padding:EdgeInsets.only(top: 10),
+                  child: SizedBox(
+                    height: 40,
+                    width: 225,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
 
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(width: 1,color: Colors.white)
-                        )
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(width: 1,color: Colors.white)
+                          )
 
 
+                      ),
                     ),
                   ),
-                ),
-              )
-            ]
-        ),
-        TableRow(
-            children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Total Amount\n(Loan Amount * Interest)",style: TextStyle(color: Colors.white,fontSize: 20),)),
-              Padding(
-                padding:EdgeInsets.only(top: 10),
-                child: SizedBox(
-                  height: 50,
-                  width: 225,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
+                )
+              ]
+          ),
+          TableRow(
+              children: [
+                Padding(padding: EdgeInsets.only(top: 10),child: Text("Total Amount\n(Loan Amount * Interest)",style: TextStyle(color: Colors.white,fontSize: 15),)),
+                Padding(
+                  padding:EdgeInsets.only(top: 10),
+                  child: SizedBox(
+                    height: 40,
+                    width: 225,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
 
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(width: 1,color: Colors.white)
-                        )
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(width: 1,color: Colors.white)
+                          )
 
 
+                      ),
                     ),
                   ),
-                ),
-              )
-            ]
-        ),
-        TableRow(
-            children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("No. of Days",style: TextStyle(color: Colors.white,fontSize: 20),)),
-              Padding(
-                padding:EdgeInsets.only(top: 10),
-                child: SizedBox(
-                  height: 50,
-                  width: 225,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
+                )
+              ]
+          ),
+          TableRow(
+              children: [
+                Padding(padding: EdgeInsets.only(top: 10),child: Text("No. of Days",style: TextStyle(color: Colors.white,fontSize: 15),)),
+                Padding(
+                  padding:EdgeInsets.only(top: 10),
+                  child: SizedBox(
+                    height: 40,
+                    width: 225,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
 
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(width: 1,color: Colors.white)
-                        )
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(width: 1,color: Colors.white)
+                          )
 
 
+                      ),
                     ),
                   ),
-                ),
-              )
-            ]
-        ),
-        TableRow(
-            children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Loan Per Installment",style: TextStyle(color: Colors.white,fontSize: 20),)),
-              Padding(
-                padding:EdgeInsets.only(top: 10),
-                child: SizedBox(
-                  height: 50,
-                  width: 225,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
+                )
+              ]
+          ),
+          TableRow(
+              children: [
+                Padding(padding: EdgeInsets.only(top: 10),child: Text("Loan Per Installment",style: TextStyle(color: Colors.white,fontSize: 15),)),
+                Padding(
+                  padding:EdgeInsets.only(top: 10),
+                  child: SizedBox(
+                    height: 40,
+                    width: 225,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
 
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(width: 1,color: Colors.white)
-                        )
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(width: 1,color: Colors.white)
+                          )
 
 
+                      ),
                     ),
                   ),
-                ),
-              )
-            ]
-        ),
+                )
+              ]
+          ),
 
 
-      ],
+        ],
+      ),
     );
   }
 }

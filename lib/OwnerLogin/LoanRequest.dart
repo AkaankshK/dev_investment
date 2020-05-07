@@ -44,7 +44,7 @@ class _LoanRequestState extends State<LoanRequest> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
-              child: Image.asset("assets/background1.png"),),
+              child: Image.asset("assets/background11.png",fit: BoxFit.fill,),),
             getContents(),
           ],
         ),
@@ -54,8 +54,9 @@ class _LoanRequestState extends State<LoanRequest> {
 
   getContents() {
     return Padding(
-      padding: EdgeInsets.only(left:40,top:250),
+      padding: EdgeInsets.only(top: 150,left: 40),
       child: Column(
+
         children: [
 
           Row(
@@ -149,7 +150,7 @@ class _LoanRequestState extends State<LoanRequest> {
               minWidth: 100,
               child: Text("Submit",style: TextStyle(color: Colors.white),),
               onPressed: (){
-                
+
               },
             ),
           )
