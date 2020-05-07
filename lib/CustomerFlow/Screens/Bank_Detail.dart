@@ -1,5 +1,5 @@
-import 'package:devinvestment/CustomerFlow/utils/const.dart';
-import 'package:devinvestment/Employee/screens/employye_login.dart';
+import 'package:devinvestment/utils/const.dart';
+import 'package:devinvestment/Employee/employye_login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

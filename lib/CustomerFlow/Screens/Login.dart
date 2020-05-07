@@ -14,12 +14,12 @@ class _loginState extends State<login> {
       appBar: AppBar(
 
         actions: [
-          FlatButton(
-            child: Text("Open Company Flow"),
-            onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
-            },
-          )
+//          FlatButton(
+//            child: Text("Open Company Flow"),
+//            onPressed: (){
+//              Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+//            },
+//          )
         ],
       ),
       body: Stack(
@@ -61,7 +61,7 @@ class _loginState extends State<login> {
                     padding: EdgeInsets.all(8.0),
                     onPressed: () {  Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => accout()),
+                      MaterialPageRoute(builder: (context) => welcome()),
                     );},
                     child: Text(
                       "Login".toUpperCase(),
@@ -91,7 +91,7 @@ class _loginState extends State<login> {
                     onPressed: () {
                       Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => welcome()));
+                          MaterialPageRoute(builder: (context) => account()));
                     },
                     child: Text(
                       "Register".toUpperCase(),

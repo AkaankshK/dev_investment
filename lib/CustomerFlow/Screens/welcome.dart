@@ -1,14 +1,18 @@
 import 'package:devinvestment/CustomerFlow/Screens/forgot_password.dart';
 import 'package:flutter/material.dart';
-import 'package:devinvestment/CustomerFlow/utils/const.dart';
-import 'package:devinvestment/CustomerFlow/utils/buttons.dart';
+import 'file:///D:/flutterProjects/dev_investment/lib/utils/const.dart';
+import 'file:///D:/flutterProjects/dev_investment/lib/utils/buttons.dart';
 import 'package:devinvestment/OwnerLogin/HomePage.dart';
+import 'Request.dart';
+import 'package:devinvestment/Employee/empDetails.dart';
+
 class welcome extends StatefulWidget {
   @override
   _welcomeState createState() => _welcomeState();
 }
 
 class _welcomeState extends State<welcome> {
+  var myController = TextEditingController();
   String _email;
   @override
   Widget build(BuildContext context) {
@@ -42,19 +46,27 @@ class _welcomeState extends State<welcome> {
                     height: 20,
                   ),
                   CustomTextField(
+                    controller: myController,
                     onSaved: (input) {
-                      _email = input;
+                      setState(() {
+                        _email = input;
+                        print(_email);
+                      });
                     },
                     icon: Icon(Icons.email),
                     hint: "Your Email Address",
+
                   ),
                   SizedBox(
                     height: 20,
                   ),
                   CustomTextField(
+
                     obsecure: true,
                     onSaved: (input) {
-                      _email = input;
+
+                       _email = input;
+
                     },
                     icon: Icon(Icons.email),
                     hint: "Password",
@@ -63,11 +75,21 @@ class _welcomeState extends State<welcome> {
                     height: 20,
                   ),
                   RoundButoon(color: Colors.deepPurple,f:(){
-                  if(_email=='customer'){
+                  if(myController.text=='company'){
                       Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => HomePage()));
                     }
+                  if(myController.text=='customer'){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Request()));
+                  }
+                  if(myController.text=='employee'){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => details()));
+                  }
                   },name: 'Login',),
                   SizedBox(
                     height: 20,

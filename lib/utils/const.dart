@@ -7,12 +7,15 @@ class CustomTextField extends StatelessWidget {
         this.obsecure = false,
         this.fillcolor=true,
         this.validator,
-        this.onSaved});
+        this.onSaved,
+        this.controller
+        });
   final FormFieldSetter<String> onSaved;
   final Icon icon;
   final String hint;
   final bool obsecure;
   final bool fillcolor;
+  final TextEditingController controller;
   final FormFieldValidator<String> validator;
   @override
   Widget build(BuildContext context) {
@@ -20,6 +23,7 @@ class CustomTextField extends StatelessWidget {
       height: 50,
       padding: EdgeInsets.only(left: 30, right: 30),
       child: TextFormField(
+        controller: controller,
         onSaved: onSaved,
         validator: validator,
         autofocus: true,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:devinvestment/CustomerFlow/utils/const.dart';
-import 'package:devinvestment/CustomerFlow/utils/buttons.dart';
+import 'file:///D:/flutterProjects/dev_investment/lib/utils/const.dart';
+import 'file:///D:/flutterProjects/dev_investment/lib/utils/buttons.dart';
 class password extends StatefulWidget {
   @override
   _passwordState createState() => _passwordState();

@@ -1,9 +1,9 @@
-import 'package:devinvestment/CustomerFlow/utils/buttons.dart';
+import 'file:///D:/flutterProjects/dev_investment/lib/utils/buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:devinvestment/CustomerFlow/utils/const.dart';
+import 'file:///D:/flutterProjects/dev_investment/lib/utils/const.dart';
 import 'package:flutter/cupertino.dart';
 
-class accout extends StatefulWidget {
+class account extends StatefulWidget {
   @override
   _accoutState createState() => _accoutState();
 }
@@ -12,7 +12,7 @@ final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 bool _autoValidate = false;
 String _value;
 
-class _accoutState extends State<accout> {
+class _accoutState extends State<account> {
   Future _selectDate() async {
     DateTime picked = await showDatePicker(
         context: context,

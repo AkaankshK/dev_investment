@@ -6,6 +6,8 @@ import 'package:devinvestment/OwnerLogin/CashBank.dart';
 import 'package:devinvestment/OwnerLogin/ExpensesPage.dart';
 import 'package:devinvestment/OwnerLogin/LoanRequest.dart';
 import 'package:devinvestment/OwnerLogin/ViewLoanDetails.dart';
+import 'employye_login.dart';
+
 
 import 'package:flutter/material.dart';
 
@@ -124,7 +126,7 @@ class _HomePageState extends State<HomePage> {
               leading: Image.asset("assets/Icons/1.png",width: 50,height: 50,),
               title: Text("Create Employee ID",style: TextStyle(fontSize: 15),),
               onTap: (){
-               // Navigator.push(context, MaterialPageRoute(builder: (context)=> DummyPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> empLogin()));
               },
 
             ),
