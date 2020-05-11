@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (BuildContext context)=>[
                 PopupMenuItem(
                   child: CheckboxListTile(
-                    title: Text("Show zero balance party"),
+                    title: Text("Show zero balance party",style: TextStyle(fontSize: 10),),
                     value: popup,
                     onChanged: (val){
                       setState(() {
