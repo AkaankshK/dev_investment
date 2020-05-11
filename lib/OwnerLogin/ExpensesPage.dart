@@ -47,7 +47,7 @@ class _ExpensesPageState extends State<ExpensesPage> {
 //
 //                      fit: BoxFit.fill)
 //              )
-              child: Image.asset("assets/financeBack.png",fit: BoxFit.fill,),
+              child: Image.asset("assets/financeBack.jpg",fit: BoxFit.fill,),
             ),
             getContents(),
           ],
@@ -58,7 +58,7 @@ class _ExpensesPageState extends State<ExpensesPage> {
 
   getContents() {
     return Padding(
-      padding: EdgeInsets.only(left: 30,top: 125,right: 20),
+      padding: EdgeInsets.only(left: 30,top: 100,right: 20),
       child: Column(
         children: [
           getTable(),
@@ -74,7 +74,7 @@ class _ExpensesPageState extends State<ExpensesPage> {
                       borderRadius: BorderRadius.circular(20)
                   ),
                   color: dyellow,
-                  child: Text("Submit",style: TextStyle(color: Colors.white,fontSize: 25),),
+                  child: Text("Submit",style: TextStyle(color: Colors.white,fontSize: 15),),
                 ),
               ),
               Padding(
@@ -85,7 +85,7 @@ class _ExpensesPageState extends State<ExpensesPage> {
                       borderRadius: BorderRadius.circular(20)
                   ),
                   color: dyellow,
-                  child: Text("Save",style: TextStyle(color: Colors.white,fontSize: 25),),
+                  child: Text("Save",style: TextStyle(color: Colors.white,fontSize: 15),),
                 ),
               ),
             ],
@@ -98,16 +98,17 @@ class _ExpensesPageState extends State<ExpensesPage> {
 
   getTable() {
     return Table(
+      columnWidths: {1:FractionColumnWidth(.4)},
       defaultVerticalAlignment: TableCellVerticalAlignment.middle,
       children: [
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Party Details",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Party Details",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
-                  width: 225,
+                  height: 40,
+
                   child: TextField(
                     decoration: InputDecoration(
                         filled: true,
@@ -127,12 +128,12 @@ class _ExpensesPageState extends State<ExpensesPage> {
         ),
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Receipt Number",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Receipt Number",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
-                  width: 225,
+                  height: 40,
+
                   child: TextField(
                     decoration: InputDecoration(
                         filled: true,
@@ -152,12 +153,11 @@ class _ExpensesPageState extends State<ExpensesPage> {
         ),
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Party Name",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Party Name",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
-                  width: 225,
+                  height: 40,
                   child: TextField(
                     decoration: InputDecoration(
                         filled: true,
@@ -177,12 +177,11 @@ class _ExpensesPageState extends State<ExpensesPage> {
         ),
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Party Balance",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Party Balance",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
-                  width: 225,
+                  height: 40,
                   child: TextField(
                     decoration: InputDecoration(
                         filled: true,
@@ -202,12 +201,11 @@ class _ExpensesPageState extends State<ExpensesPage> {
         ),
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Today receieved Payemnt",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Today received Payment",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
-                  width: 225,
+                  height: 40,
                   child: TextField(
                     decoration: InputDecoration(
                         filled: true,
@@ -227,12 +225,11 @@ class _ExpensesPageState extends State<ExpensesPage> {
         ),
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Discareded Amount",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Discarded Amount",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
-                  width: 225,
+                  height: 40,
                   child: TextField(
                     decoration: InputDecoration(
                         filled: true,
@@ -252,12 +249,11 @@ class _ExpensesPageState extends State<ExpensesPage> {
         ),
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Total received Installment",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Total received Installment",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
-                  width: 225,
+                  height: 40,
                   child: TextField(
                     decoration: InputDecoration(
                         filled: true,
@@ -277,12 +273,11 @@ class _ExpensesPageState extends State<ExpensesPage> {
         ),
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Total Due Installment",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Total Due Installment",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
-                  width: 225,
+                  height: 40,
                   child: TextField(
                     decoration: InputDecoration(
                         filled: true,
@@ -302,12 +297,11 @@ class _ExpensesPageState extends State<ExpensesPage> {
         ),
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Payment out",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Payment out",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
-                  width: 225,
+                  height: 40,
                   child: TextField(
                     decoration: InputDecoration(
                         filled: true,

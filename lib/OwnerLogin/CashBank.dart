@@ -64,7 +64,7 @@ class _CashBankState extends State<CashBank> {
           getTable(),
 
 
-
+          SizedBox(height: 20,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -77,7 +77,7 @@ class _CashBankState extends State<CashBank> {
                       borderRadius: BorderRadius.circular(20)
                   ),
                   color: dyellow,
-                  child: Text("Done",style: TextStyle(color: Colors.white,fontSize: 25),),
+                  child: Text("Done",style: TextStyle(color: Colors.white,fontSize: 15),),
                 ),
               ),
             ],
@@ -91,14 +91,15 @@ class _CashBankState extends State<CashBank> {
   getTable() {
     return Table(
       defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      columnWidths: {1:FractionColumnWidth(.4)},
       children: [
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Cash in Amount",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Cash in Amount",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
+                  height: 40,
                   width: 225,
                   child: TextField(
                     decoration: InputDecoration(
@@ -119,11 +120,11 @@ class _CashBankState extends State<CashBank> {
         ),
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Cash in Amount",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Cash in Amount",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
+                  height: 40,
                   width: 225,
                   child: TextField(
                     decoration: InputDecoration(
@@ -145,11 +146,11 @@ class _CashBankState extends State<CashBank> {
 
         TableRow(
             children: [
-              Padding(padding: EdgeInsets.only(top: 10),child: Text("Amount in Account",style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Padding(padding: EdgeInsets.only(top: 10),child: Text("Amount in Account",style: TextStyle(color: Colors.white,fontSize: 15),)),
               Padding(
                 padding:EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  height: 50,
+                  height: 40,
                   width: 225,
                   child: TextField(
                     decoration: InputDecoration(

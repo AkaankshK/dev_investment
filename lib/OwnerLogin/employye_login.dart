@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'file:///D:/flutterProjects/dev_investment/lib/utils/const.dart';
 import 'file:///D:/flutterProjects/dev_investment/lib/utils/buttons.dart';
@@ -23,51 +24,53 @@ class _empLoginState extends State<empLogin> {
               ),
             ),
           ),
-          SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Container(
-                    height: 170,
-                    width: 250,
-                    decoration: BoxDecoration(
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 170,
+                  width: 250,
+                  decoration: BoxDecoration(
 
-                        image:DecorationImage(image: AssetImage('images/devlogo.png'))
-                    ),
+                      image:DecorationImage(image: AssetImage('images/devlogo.png'))
                   ),
-                  Text('Create Employee',style: TextStyle(color:Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  CustomTextField(
-                    onSaved: (input) {
-                      _email = input;
-                    },
-                    icon: Icon(Icons.email),
-                    hint: "Email Address",
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  CustomTextField(
-                    obsecure: true,
-                    onSaved: (input) {
-                      _email = input;
-                    },
-                    icon: Icon(Icons.email),
-                    hint: "Password",
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  RoundButoon(color: Color.fromRGBO(35, 39, 70, 1),f:(){
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text('Create Employee',style: TextStyle(color:Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
+                SizedBox(
+                  height: 20,
+                ),
+                CustomTextField(
+                  onSaved: (input) {
+                    _email = input;
+                  },
+                  icon: Icon(Icons.email),
+                  hint: "Email Address",
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                CustomTextField(
+                  obsecure: true,
+                  onSaved: (input) {
+                    _email = input;
+                  },
+                  icon: Icon(Icons.email),
+                  hint: "Password",
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                RoundButoon(color: Color.fromRGBO(35, 39, 70, 1),f:(){
 //                    Navigator.push(
 //                        context,
 //                        MaterialPageRoute(builder: (context) => details()));
-                  },name: 'Sumbit',),
-                ],
-              ),
+                },name: 'Sumbit',),
+              ],
             ),
           )
         ],

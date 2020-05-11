@@ -43,7 +43,7 @@ class _AddPartyState extends State<AddParty> {
             Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
-                  child: Image.asset("assets/background2.png",fit: BoxFit.fill,),),
+                  child: Image.asset("assets/background21.png",fit: BoxFit.fill,),),
            getContents(),
           ],
         ),
@@ -173,8 +173,11 @@ class _AddPartyState extends State<AddParty> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   MaterialButton(
-                    color: emiOption==0?dyellow:Colors.grey,
-                    child: Text("Daily"),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    color: emiOption==0?dyellow:Colors.white,
+                    child: Text("Daily",style: TextStyle(color: emiOption==0?Colors.white:Colors.black),),
                     onPressed: (){
                       setState(() {
                         emiOption=0;
@@ -182,8 +185,11 @@ class _AddPartyState extends State<AddParty> {
                     },
                   ),
                   MaterialButton(
-                    color: emiOption==1?dyellow:Colors.grey,
-                    child: Text("Weekly"),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    color: emiOption==1?dyellow:Colors.white,
+                    child: Text("Weekly",style: TextStyle(color: emiOption==1?Colors.white:Colors.black)),
                     onPressed: (){
                       setState(() {
                         emiOption=1;
@@ -192,8 +198,11 @@ class _AddPartyState extends State<AddParty> {
                   ),
 
                   MaterialButton(
-                    color: emiOption==2?dyellow:Colors.grey,
-                    child: Text("Monthly"),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    color: emiOption==2?dyellow:Colors.white,
+                    child: Text("Monthly",style: TextStyle(color: emiOption==2?Colors.white:Colors.black)),
                     onPressed: (){
                       setState(() {
                         emiOption=2;
@@ -206,6 +215,9 @@ class _AddPartyState extends State<AddParty> {
             Align(
               alignment: Alignment.bottomCenter,
               child: MaterialButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)
+                ),
                 color: dblue,
                 minWidth: 100,
                 child: Text("NEXT",style: TextStyle(color: Colors.white),),

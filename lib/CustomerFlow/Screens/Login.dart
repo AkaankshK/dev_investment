@@ -11,17 +11,17 @@ class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-
-        actions: [
-//          FlatButton(
-//            child: Text("Open Company Flow"),
-//            onPressed: (){
-//              Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
-//            },
-//          )
-        ],
-      ),
+//      appBar: AppBar(
+//
+//        actions: [
+////          FlatButton(
+////            child: Text("Open Company Flow"),
+////            onPressed: (){
+////              Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+////            },
+////          )
+//        ],
+//      ),
       body: Stack(
           children:<Widget> [
       Container(

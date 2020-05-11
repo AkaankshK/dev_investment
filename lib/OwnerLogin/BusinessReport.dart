@@ -44,9 +44,9 @@ class _BusinessReportState extends State<BusinessReport> {
     return Stack(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height/1.5,
+          height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          child: Image.asset("assets/financeBack.png",fit: BoxFit.fill,),
+          child: Image.asset("assets/financeBack.jpg",fit: BoxFit.fill,),
         ),
         getContents(),
       ],
@@ -61,32 +61,35 @@ class _BusinessReportState extends State<BusinessReport> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(
+            height: 35,
+          ),
           Padding(
-            padding: const EdgeInsets.only(top: 30,left: 8),
-            child: Text("Payment Out",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+            padding: const EdgeInsets.only(top: 20,left: 8),
+            child: Text("Payment Out",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           GestureDetector(
             onTap: (){_showDialog(context);},
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Name",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+              child: Text("Name",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Total Amount",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Total Amount",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Date",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Date",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Discount",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Discount",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Paid",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Paid",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -98,7 +101,7 @@ class _BusinessReportState extends State<BusinessReport> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("Reminder",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+                  child: Text("Reminder",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
                 ),
               ),
               Icon(Icons.share,color: dyellow,),
@@ -111,30 +114,30 @@ class _BusinessReportState extends State<BusinessReport> {
             thickness: 3,
           ),Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Payment In",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Payment In",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           GestureDetector(
             onTap: (){_showDialog(context);},
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Name",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+              child: Text("Name",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Total Amount",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Total Amount",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Date",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Date",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Discount",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Discount",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Paid",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Paid",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -145,7 +148,7 @@ class _BusinessReportState extends State<BusinessReport> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("Reminder",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+                  child: Text("Reminder",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
                 ),
               ),
               Icon(Icons.share,color: dyellow,),
@@ -159,15 +162,15 @@ class _BusinessReportState extends State<BusinessReport> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Name",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Name",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Total Amount",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Total Amount",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Discount",style: TextStyle(color: dyellow,fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text("Discount",style: TextStyle(color: dyellow,fontSize: 15,fontWeight: FontWeight.bold),),
           ),
         ],
         ),

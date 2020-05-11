@@ -105,7 +105,7 @@ class _AddParty2State extends State<AddParty2> {
                     borderRadius: BorderRadius.circular(20)
                   ),
                   color: dyellow,
-                  child: Text("Submit",style: TextStyle(color: Colors.white,fontSize: 25),),
+                  child: Text("Submit",style: TextStyle(color: Colors.white,fontSize: 20),),
                 ),
               ),
             ],
@@ -121,6 +121,7 @@ class _AddParty2State extends State<AddParty2> {
       top: 50,
       left: 30,
       child: Table(
+        columnWidths: {1:FractionColumnWidth(.4)},
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
         children: [
           TableRow(

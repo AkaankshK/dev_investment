@@ -34,7 +34,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool popup=false;
+  bool popup;
   MaterialColor dyellow = MaterialColor(0xffe0903b,colors);
   MaterialColor dblue = MaterialColor(0xff25274e,colors);
   @override
@@ -61,7 +61,9 @@ class _HomePageState extends State<HomePage> {
                     title: Text("Show zero balance party"),
                     value: popup,
                     onChanged: (val){
-                      popup=true;
+                      setState(() {
+                        popup=val;
+                      });
                     },
                   ),
                 )
@@ -114,8 +116,8 @@ class _HomePageState extends State<HomePage> {
 
               ),
               child: CircleAvatar(
-                child: Image.asset("assets/user-picture.png",fit: BoxFit.scaleDown,height: 100,width: 100,color: Colors.white,),
-                backgroundColor: Colors.black,
+                child: Image.asset("assets/iconnn.png",fit: BoxFit.fill,height: 125,width: 125,),
+                backgroundColor: Colors.transparent,
 
 
 
@@ -214,12 +216,12 @@ class _HomePageState extends State<HomePage> {
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          child: Image.asset("assets/backmain1.png",fit: BoxFit.fill
+          child: Image.asset("assets/backmain.png",fit: BoxFit.fill
             ,),),
         Wrap(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 150,horizontal: 30),
+              padding: EdgeInsets.symmetric(vertical: 75,horizontal: 30),
               child: Table(
                 defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                 columnWidths: {1:FractionColumnWidth(.4)},
